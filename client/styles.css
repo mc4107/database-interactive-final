@@ -1,0 +1,1057 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cuprum|Montserrat');
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	overflow: auto;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-family: 'Cuprum', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+span{
+	color: #3d3d3d;
+	font-size: 3.5rem;
+}
+
+#wrapper{
+	display: flex;
+	flex-direction: row;
+}
+
+#left{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: #bed4c5;
+	height: 100vh;
+}
+
+#right{
+	flex: 5;
+	background-color: #ddecdc;
+}
+
+#userPic{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 7vh
+}
+
+#userContentPic{
+	width: 40%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1vh;
+}
+
+#userName{
+	text-align: center;
+	margin: inherit;
+	margin-top: 2%;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+#userType{
+	text-align: center;
+	margin: inherit;
+	font-size: 1rem;
+	margin-top: 1%;
+}
+
+#logo{
+	margin-left: 2%;
+	margin-top: 3vh;
+	color: #5a5a5a;
+}
+
+#researchHeaderWrapper{
+	padding-bottom: 8vh;
+}
+
+#settingLogo{
+	float: left;
+	margin-left: 2%;
+	color: #5a5a5a;
+}
+
+#settingTitle{
+	float: right;
+	margin-right: 5%;
+}
+
+#settingContent{
+	margin-top: 20vh;
+	margin-right: 30%;
+	margin-left: 10%;
+	display: flex;
+	flex-direction: row;
+	border-color: #3d3d3d;
+	border-width: 1px;
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+}
+
+#availability{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#paragraph{
+	flex: 1;
+}
+
+#onButtonDiv{
+	flex: 2;
+}
+
+#offButtonDiv{
+	flex: 2;
+}
+
+#onButtonDiv button{
+	background-color: #df7874;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+#offButtonDiv button{
+	background-color: #5a5a5a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+#onButtonDiv button:hover{
+	background-color: #53a7ea;
+}
+
+#offButtonDiv button:hover{
+	background-color: #53a7ea;
+}
+
+#descContent{
+	margin-left: 10%;
+}
+
+#createContent{
+	margin-left: 10%;
+}
+
+#descContent p{
+	font-size: 120%;
+	border-width: 1px;
+    border-color: #3d3d3d;
+    border-style: solid;
+    padding-bottom: 1%;
+    margin-right: 95vh;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#descSubmit{
+	display: list-item;
+	background-color: #3d3d3d;
+	color: white;
+	padding: 10px 15px;
+	margin-top: .5%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#createContent p{
+	font-size: 120%;
+	border-width: 1px;
+    border-color: #3d3d3d;
+    border-style: solid;
+    padding-bottom: 1%;
+    margin-right: 95vh;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#createSubmit{
+	display: list-item;
+	background-color: #3d3d3d;
+	color: white;
+	padding: 10px 15px;
+	margin-top: .5%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#descSubmit:hover{
+	background-color:#53a7ea;
+}
+
+#createSubmit:hover{
+	background-color:#53a7ea;
+}
+
+#desc{
+	height: 10vh;
+	width: 33%;
+}
+
+#create{
+	height: 10vh;
+	width: 33%;
+}
+
+/* Data Table Frame */
+
+#frame{
+	border-radius: 3px;
+	border-bottom: 2px solid #ccc;
+	margin-top: 8vh;
+	margin-left: 10%;
+	background-color: #ddd;
+	width: 80%;
+	transition: all 0.9s;
+}
+
+#frameContent{
+	background-color: white;
+	height: 50vh;
+	width: auto;
+	overflow-y: auto;
+
+	/* display: flex; */
+	flex-direction: column;
+}
+
+#frame:hover{
+    box-shadow:
+	1px 1px #53a7ea,
+	2px 2px #53a7ea,
+	3px 3px #53a7ea;
+	-webkit-transform: translateX(-3px);
+	transform: translateX(-3px);
+}
+
+.dataFrame{
+	background-color: #5a5a5a;
+	width: 100%;
+	height: 18vh;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.nameSection{
+	height: 100%;
+	width: 25%;
+	background-color: #f7f7f7;
+}
+
+.nameSection p{
+	margin: 0;
+	text-align: center;
+}
+
+.date{
+	font-size: .8rem;
+}
+
+.descSection{
+	height: 100%;
+	width: 80%;
+	background-color: #f3f3f3;
+	overflow-y: auto;
+}
+
+.descSection h2{
+	margin: 0;
+	font-weight: 100;
+}
+
+.descSection p{
+	font-size: 90%;
+	text-align: left;
+	padding-right: 14%;
+}
+
+.categorySection{
+	height: 100%;
+	width: 20%;
+	background-color: #f3f3f3;
+}
+
+.categoryLabel{
+	font-family: 'Cuprum', sans-serif;
+	font-weight: 100;
+	padding-right: 2%;
+	padding-left: 2%;
+	color: #de7874;
+}
+
+#interestContent{
+	margin-left: 10%;
+	margin-top: 6%;
+}
+
+#interestContent p{
+	font-size: 120%;
+
+}
+
+/* Radio Buttons */
+
+/* Customize the label (the container) */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 2.3rem;
+  margin-bottom: 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.customRadio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .customRadio {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .customRadio {
+  background-color: #5a5a5a;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.customRadio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .customRadio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .customRadio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+#radioBorderContainer{
+	border-width: 1px;
+	border-color: #3d3d3d;
+	border-style: solid;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-right: 95vh;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+
+/* Radio Button End */
+
+
+/* Dropdown Menu */
+
+.dropDownBtn {
+    background-color: #df7874;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+    max-height: 250px;
+}
+
+.dropContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropContent a:hover {background-color: #f1f1f1}
+
+.dropDown:hover .dropContent {
+    display: block;
+}
+
+.dropDown:hover .dropDownBtn {
+    background-color: #53a7ea;
+}
+
+.arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Data Table Frame End */
+
+/* Research Page */
+
+.researchDataFrame{
+	background-color: #f7f7f7;
+	width: 100%;
+	height: 8vh;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.researchNameSection{
+	flex: 3;
+}
+
+.researchNameSection h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	margin: 0;
+	padding-top: 2%;
+	padding-left: 1%;
+	color: #3d3d3d;
+}
+
+.researchInfoSection{
+	flex: 1;
+}
+
+#createForm{
+	display: grid;
+}
+
+.researchInfoSection button{
+	background-color: #df7874;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+.createResearchDiv{
+	margin-left: 10%;
+}
+
+#createDesc{
+	margin-bottom: 2%;
+}
+.createResearchDiv button{
+	background-color: #df7874;
+    color: white;
+    font-size: 1.5rem;
+    padding: .5%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1%;
+    border-radius: 3px;
+}
+
+.researchInfoSection button:hover{
+	background-color: #53a7ea;
+}
+
+.createResearchDiv button:hover{
+	background-color: #53a7ea;
+}
+
+/* Research Page End */
+
+/* Login Page */
+
+.emptySpace1{
+	flex: .5;
+	background-color: #bed4c5;
+/*	background-image: url('bg1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	filter:blur(1px);*/
+}
+
+/*.emptySpace1:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(118, 125, 117, 0.5);
+}*/
+
+.emptySpace2{
+	flex: .5;
+	background-color: #bed4c5;
+/*	background-image: url('bg4.jpg');
+	background-size: cover;
+	position: relative;
+	filter:blur(1px);
+*/}
+
+/*.emptySpace2:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(118, 125, 117, 0.5);
+}
+*/
+
+#loginContainer{
+	background-color: #bed4c5;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	transition: all 0.9s;
+}
+
+#loginContainer:hover{
+    box-shadow:
+	1px 1px #53a7ea,
+	2px 2px #53a7ea,
+	3px 3px #53a7ea;
+	-webkit-transform: translateX(10px 0-3px);
+	transform: translateX(-10px);
+}
+
+
+#signIn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	padding-bottom: 1rem;
+}
+
+#signIn form{
+	width: 80%;
+	padding-bottom: 3rem;
+}
+
+#signIn .logo{
+	margin-bottom: 8vh;
+}
+
+#signIn .intro{
+	width: 80%;
+	font-size: .9rem;
+	color: #5f5c5c;
+}
+
+#signIn .intro a{
+	text-decoration: none;
+	color: #df7874;
+}
+
+
+#signIn label {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+#signIn .text-input{
+	margin-bottom: 1.3rem;
+	width: 100%;
+	border-radius: 2px;
+	background: #fdfbfb;
+	border: 1px solid #d8d8d8;
+	color: #5f5c5c;
+	padding: 0.5rem 1rem;
+	line-height: 1.3rem;
+}
+
+#loginLogo{
+	margin-top: 3vh;
+	color: #5a5a5a;
+}
+
+
+
+/* Button */
+.primary-btn {
+	padding: 0.7rem 1rem;
+	height: 2.7rem;
+	display: block;
+	border: 0;
+	border-radius: 2px;
+	font-weight: 500;
+	background: #df7874;
+	color: #fdfbfb;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.8s;
+}
+
+#signIn .primary-btn {
+	width: 100%;
+}
+
+.primary-btn:hover {
+	background-color: #3d3d3d;
+}
+
+.signUp-btn {
+	padding: 0.7rem 1rem;
+	height: 2.7rem;
+	display: block;
+	border: 0;
+	border-radius: 2px;
+	font-weight: 500;
+	background: none;
+	color: #5f5c5c;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.8s;
+}
+
+#signUpColor {
+	color: #df7874;
+	font-size: .9rem;
+}
+
+#radioBtns {
+	margin-bottom: 2%;
+}
+
+/* Customize the label (the container) */
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container3 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container3 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container2 input:checked ~ .checkmark {
+  background-color: #ee7170;
+}
+
+.container3:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container3 input:checked ~ .checkmark {
+  background-color: #ee7170;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container2 .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.container3 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container3 .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+#loginFooter{
+	color: #847b7b;
+	text-align: center;
+	font-size: 0.8rem;
+	max-width: 80%;
+	padding-top: 5rem;
+}
+
+#loginFooter a{
+	color: #f96816;
+	text-decoration-color: underline;
+}
+
+
+/* Login Page End */
+
+/* Navigation */
+
+#nav{
+	margin-top: 6.5vh;
+	height: 100vh;
+}
+
+a{
+	text-decoration: none;
+}
+
+.navButton{
+	display: block;
+	border-width: 2px;
+	border-right: none !important;
+	border-left: none !important;
+	border-style: solid;
+	border-color: #ddecdc;
+	background: #3d3d3d;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.8s;
+	width: 100%;
+	height: 10vh;
+	font-size: 2rem;
+	font-weight: 100;
+}
+
+.navButton:hover{
+	background-color: #df7874;
+}
+
+/*#signOutBtn{
+	padding-bottom: 100vh;
+	padding-top: 6vh;
+}*/
+
+/* Navigation END */
+
+/* Modal Window */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    text-align: center;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal2 {
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    display: flex;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 30%;
+}
+
+.modal-content2 {
+    background-color: #fefefe;
+    display: flex;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    height: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#btnDiv{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding-right: 2%;
+}
+
+#btnDiv p{
+	margin-top: 2vh;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.modalBtn {
+	background-color: #df7874;
+	color: white;
+	padding: 16px;
+	margin-left: 15%;
+	margin-top: 19vh;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modalBtn2 {
+	background-color: #df7874;
+	color: white;
+	padding: 16px;
+	margin-top: 19vh;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modalBtn2:hover {
+	background-color: #53a7ea;
+
+}
+
+.modalBtn:hover {
+    background-color: #53a7ea;
+}
+
+#emptySpace{
+	flex: 1;
+}
+
+#emptySpaceResearch{
+	flex: .5;
+}
+
+/* Modal Window End  */
+
+.checkBoxDiv {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 22px;
+    flex: 7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkBoxDiv input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkBoxDiv:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkBoxDiv input:checked ~ .checkmark {
+    background-color: #5a5a5a;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkBoxDiv input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkBoxDiv .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="client.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Project Login</title>
+</head>
+
+<body>
+<div id="wrapper">
+	<div class="emptySpace1">
+	</div>
+	<div id="loginContainer">
+
+		<div id="signIn">
+			<h1 id="loginLogo"><span>RIT</span> Research Search</h1>
+			<div class="intro"><p>Welcome back! Login to access your streamlined research connection platform. Though, maybe you've <a href='#'>forgot your password?</a></p></div>
+			<form>
+			<div>
+				<label>Email or Username</label>
+				<input type="text" class="text-input" /> 
+				<label>Password</label>
+				<input type="password" class="text-input" />
+			</div>
+			<a href="homepage.html"><button type="submit" class="primary-btn">Login</button></a>
+			</form>
+
+			<a href="register.html"><button class="signUp-btn">Register a new <span id="signUpColor">Account</span>?</button></a>
+    	</div>
+    	
+		<footer id="loginFooter">
+		<p>Copyright &copy; 2018 Group23 All Rights Reserved</p>
+		</footer>
+	</div>
+	<div class="emptySpace2">
+	</div>
+</div>
+
+</div>
+</body>
+<script>
+  $(document).ready(() => {
+    $('.primary-btn').click((e) => {
+      e.preventDefault();
+      login();
+    });
+  });
+</script>
+
+</html>

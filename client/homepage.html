@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="client.js"></script>
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Project Homepage</title>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="left">
+		<img src="userlogo.png" id="userPic" /> <!-- Can alter the picture for Faculty, or we can add images to our Database (stretch goal) -->
+		<p id="userName"></p> <!-- Dynamically place Username from JSON -->
+		<p id="userType">Guest</p> <!-- Dynamically place User Type from JSON -->
+		<div id="nav">
+			<a href="homepage.html"><button class="navButton">Home</button></a>
+			<a id="settingsButton" href="settings.html"><button class="navButton">Profile</button></a>
+			<a id="researchButton" href="research.html"><button class="navButton">Research</button></a>
+			<a id="signOutBtn" href="login.html"><button id="logOut" class="navButton">Sign Out</button></a>
+		</div>
+	</div>
+	<div id="right">
+		<h1 id="logo"><span>RIT</span> Research Search</h1>
+		<div id="frame">
+			<div class="dropDown">
+				<button class="dropDownBtn">Category <div class="arrow"/></button>
+				<div class="dropContent">
+					<a href="/homepage.html?category=math">Math</a>
+					<a href="/homepage.html?category=science">Science</a>
+					<a href="/homepage.html?category=general">General</a>
+				</div>
+			</div>
+			<div class="dropDown">
+				<button class="dropDownBtn" id="professorDropdownButton">Professor <div class="arrow"/></button>
+				<div class="dropContent" id="professorDropdown">
+					<a href="#">Michael Floeser</a>
+					<a href="#">Daniel Bogaard</a>
+					<a href="#">Bryan French</a>
+				</div>
+			</div>
+			<div class="dropDown">
+				<button id="clearFilter-btn" class="dropDownBtn">Clear Filter</button>
+			</div>
+			<div id="frameContent">
+				<div class="dataFrame"> <!-- Dynamically section Area from JSON. Number of copies will vary depending on query -->
+					<div class="nameSection">
+						<img src="facultylogo.png" id="userContentPic" />
+						<p>Michael Floeser</p>
+						<p class="date">Date: 03.27.1018</p>
+					</div>
+					<div class="descSection">
+						<h2>Database Login System</h2>
+						<p><b>Description</b>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel suscipit nisi. Sed cursus velit tincidunt arcu finibus, ac varius quam vehicula. Sed vel purus urna. Quisque et nibh eu odio volutpat consectetur. Etiam interdum augue et tortor varius congue. In ac laoreet leo, cursus gravida nisi. Praesent volutpat egestas tincidunt. Nullam pharetra, dolor consequat pellentesque sodales, erat lacus rutrum eros, at eleifend enim risus id neque. Nunc hendrerit laoreet tellus, et accumsan nisi dignissim et. Integer ut dapibus nisl, nec hendrerit lectus. Aliquam aliquam lorem quis purus varius, eu rhoncus odio dignissim. Integer dignissim rutrum dictum.</p>
+					</div>
+					<div class="categorySection">
+						<p class="categoryLabel">Science</p>
+					</div>
+				</div> <!-- End Dynamic dataFrame -->
+			</div>
+		</div>
+<!-- 		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Database Login System</h2>
+				<div id="btnDiv">
+					<button class="modalBtn">Request</button>
+					<button class="modalBtn">Exit</button>
+				</div>
+
+			</div>
+		</div> -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<div class="descSection">
+          			<h2 id="modalName">Database Login System</h2>
+          
+					<p id="modalDesc"><b>Description</b>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel suscipit nisi. Sed cursus velit tincidunt arcu finibus, ac varius quam vehicula. Sed vel purus urna. Quisque et nibh eu odio volutpat consectetur. Etiam interdum augue et tortor varius congue. In ac laoreet leo, cursus gravida nisi. Praesent volutpat egestas tincidunt. Nullam pharetra, dolor consequat pellentesque sodales, erat lacus rutrum eros, at eleifend enim risus id neque. Nunc hendrerit laoreet tellus, et accumsan nisi dignissim et. Integer ut dapibus nisl, nec hendrerit lectus. Aliquam aliquam lorem quis purus varius, eu rhoncus odio dignissim. Integer dignissim rutrum dictum.</p>
+				</div>
+
+				<div id="btnDiv">
+					<div id="emptySpace"></div>
+					<button class="modalBtn">Request</button>
+				</div>
+				<span class="close">&times;</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  loadHomepage();
+  var modal = document.getElementById('myModal');
+	var frame = document.getElementsByClassName("dataFrame")[0]; //We'll need to dynamically update this array value
+	var span = document.getElementsByClassName("close")[0];
+
+	frame.onclick = function() {
+	    modal.style.display = "block";
+	}
+
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="client.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Profile</title>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="left">
+		<img src="userlogo.png" id="userPic" /> <!-- Can alter the picture for Faculty, or we can add images to our Database (stretch goal) -->
+		<p id="userName">Mikhail Chebotar</p> <!-- Dynamically place Username from JSON -->
+		<p id="userType">Student</p> <!-- Dynamically place User Type from JSON -->
+		<div id="nav">
+			<a href="homepage.html"><button class="navButton">Home</button></a>
+			<a href="settings.html"><button class="navButton">Profile</button></a>
+			<a href="research.html"><button class="navButton">Research</button></a>
+			<a href="login.html"><button class="navButton" id="signOutBtn">Sign Out</button></a>
+		</div>
+	</div>
+	<div id="right">
+		<h1 id="settingLogo"><span>RIT</span> Research Search</h1>
+		<h1 id="settingTitle"><span>Profile</span></h1>
+
+		<div id=settingContent>
+			<div id="paragraph">
+				<p id="availability">Availability</p>
+			</div>
+			<label class="checkBoxDiv">
+				<input type="checkbox" id="available">
+				<span class="checkmark"></span>
+			</label>
+<!-- 			<div id="onButtonDiv">
+				<button id="onBtn" onclick="toggleBtn(this)">Yes</button>
+			</div>
+			<div id="offButtonDiv">
+				<button id="offBtn" onclick="toggleBtn(this)">No</button>
+			</div> -->
+		</div>
+
+		<div id="interestContent">
+			<p>Preferred Research Interest</p>
+
+			<div id="radioBorderContainer"> <!-- Send query depending on radio button choice -->
+				<label class="radioContainer">Math
+					<input id="checkMath" value="Math" type="checkbox" name="check"> <!-- Set default check from Json data -->
+					<span class="customRadio"></span>
+				</label>
+				<label class="radioContainer">Science
+					<input id="checkScience" value="Science" type="checkbox" name="check">
+					<span class="customRadio"></span>
+				</label>
+				<label class="radioContainer">General
+					<input id="checkGeneral" value="General" type="checkbox" name="check">
+					<span class="customRadio"></span>
+				</label>
+			</div>
+    </div>
+    
+    <div id="changeEmail">
+      <label for="email" id="emailLabel">Change Email</label>
+      <input type="text" name="email" id="email" />
+    </div>
+
+		<div id="descContent">
+			<p>Description</p>
+			<form  id="descForm" action="">
+				<textarea id="desc" name="desc" placeholder="Tell us a little something about yourself.." style="height:200px"></textarea>
+				<input id="descSubmit" type="submit" value="Submit">
+			</form>
+		</div>
+    <button id="deleteButton">Delete Account</button>
+	</div>
+</div>
+
+</body>
+
+<script>
+  $(document).ready(() => {
+    loadStudentProfile();
+  });
+</script>
